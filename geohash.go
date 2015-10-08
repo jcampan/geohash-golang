@@ -129,6 +129,16 @@ func (ll *LatLng) Lng() float64 {
 	return ll.lng
 }
 
+// Set latitude.
+func (ll *LatLng) SetLat(lat float64) {
+	ll.lat = lat
+}
+
+// Set longitude.
+func (ll *LatLng) SetLng(lng float64) {
+	ll.lng = lng
+}
+
 func refineInterval(interval []float64, cd, mask int) []float64 {
 	if cd&mask > 0 {
 		interval[0] = (interval[0] + interval[1]) / 2
